@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Resource Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>🏫 Smart Campus Slot Booking</h2>
+        <p class="subtitle">First-Year TCS Practice Portfolio Project</p>
+        
+        <hr>
+
+        <div class="card">
+            <h3>Book a Resource</h3>
+            <form id="bookingForm">
+                <label for="resource">Select Resource:</label>
+                <select id="resource" required>
+                    <option value="Computer Lab 1">Computer Lab 1 (60 Systems)</option>
+                    <option value="Seminar Hall A">Seminar Hall A (Audio/Projector)</option>
+                    <option value="IoT Research Lab">IoT Research Lab (Microcontrollers)</option>
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="slot">Select Time Slot:</label>
+                <select id="slot" required>
+                    <option value="09:00 - 11:00">09:00 AM - 11:00 AM</option>
+                    <option value="11:00 - 01:00">11:00 AM - 01:00 PM</option>
+                    <option value="02:00 - 04:00">02:00 PM - 04:00 PM</option>
+                </select>
+
+                <button type="submit">Check & Reserve Slot</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+
+        <div class="card">
+            <h3>Active Bookings Registry</h3>
+            <table id="bookingsTable">
+                <thead>
+                    <tr>
+                        <th>Resource</th>
+                        <th>Date</th>
+                        <th>Time Slot</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
